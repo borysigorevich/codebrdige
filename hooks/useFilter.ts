@@ -56,7 +56,7 @@ export const useFilter = (articles: ArticleType[] | undefined) => {
             })
 
             const filteredArticles = mappedArticles.filter(article => {
-                return article.title.includes('mark') || article.summary.includes('mark')
+                return article.title.includes('<mark>') || article.summary.includes('<mark>')
             })
 
             return setFilteredArticles(filteredArticles)
