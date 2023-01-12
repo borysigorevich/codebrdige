@@ -11,7 +11,10 @@ export const Typography: SxProps = {
 
 export const ArticlesItemWrapper: SxProps = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
+    gridTemplateColumns: {
+        xs: '1fr',
+        md: 'repeat(auto-fill, minmax(400px, 1fr))'
+    },
     gap: '45px',
     justifyItems: 'center'
 }

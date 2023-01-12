@@ -24,11 +24,13 @@ export const Search: SxProps = {
 
 export const Input: SxProps = {
 
+    width: '100%',
+    maxWidth: '650px',
+
     'input': {
         pl: '60px',
         height: '100%',
         maxHeight: '50px',
-        minWidth: '600px',
         boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.05)',
         color: '#575757'
     },
