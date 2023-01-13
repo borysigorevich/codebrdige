@@ -1,21 +1,24 @@
-import React from 'react';
-import {GetServerSideProps, InferGetServerSidePropsType} from 'next'
-import {Box} from "../../common";
-import {ArticlePage} from "../../components/pages/ArticlePage";
+import React from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
+import { Box } from '../../common'
+import { ArticlePage } from '../../components/pages/ArticlePage'
 
 export const getServerSideProps: GetServerSideProps = async (params) => {
     const id = params.query.id
-    const data = await (await fetch(`https://api.spaceflightnewsapi.net/v3/articles/${id}`)).json()
+    const data = await (
+        await fetch(`https://api.spaceflightnewsapi.net/v3/articles/${id}`)
+    ).json()
 
     return {
         props: {
-            article: data
-        }
+            article: data,
+        },
     }
 }
 
-const Article = ({article}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-
+const Article = ({
+    article,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
     return (
         <Box>
             <ArticlePage
@@ -25,7 +28,7 @@ const Article = ({article}: InferGetServerSidePropsType<typeof getServerSideProp
                 title={article.title}
             />
         </Box>
-    );
-};
+    )
+}
 
-export default Article;
+export default Article

@@ -1,4 +1,4 @@
-import {createTheme} from '@mui/material/styles'
+import { createTheme } from '@mui/material/styles'
 
 export let theme = createTheme({})
 
@@ -8,9 +8,9 @@ theme = {
         MuiTypography: {
             styleOverrides: {
                 root: {
-                    fontFamily: '"Montserrat", sans-serif'
-                }
-            }
-        }
-    }
+                    fontFamily: '"Montserrat", sans-serif',
+                },
+            },
+        },
+    },
 }

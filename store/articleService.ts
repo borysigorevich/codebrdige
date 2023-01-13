@@ -1,4 +1,4 @@
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export type ArticleType = {
     id?: number
@@ -10,14 +10,16 @@ export type ArticleType = {
 
 export const articleApi = createApi({
     reducerPath: 'article',
-    baseQuery: fetchBaseQuery({baseUrl: 'https://api.spaceflightnewsapi.net/v3/articles'}),
-    endpoints: build => ({
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'https://api.spaceflightnewsapi.net/v3/articles',
+    }),
+    endpoints: (build) => ({
         getArticles: build.query<ArticleType[], string>({
             query: () => ({
-                url: ''
-            })
-        })
-    })
+                url: '',
+            }),
+        }),
+    }),
 })
 
-export const {useGetArticlesQuery} = articleApi
+export const { useGetArticlesQuery } = articleApi

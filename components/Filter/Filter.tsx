@@ -1,7 +1,7 @@
-import React, {ChangeEvent, Dispatch, SetStateAction} from 'react';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import React, { ChangeEvent, Dispatch, SetStateAction } from 'react'
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded'
 
-import {Box, TextField, Typography} from '../../common'
+import { Box, TextField, Typography } from '../../common'
 
 import * as styles from './styles'
 
@@ -10,17 +10,18 @@ type FilterType = {
     setSearchString: Dispatch<SetStateAction<string>>
 }
 
-export const Filter = ({searchString, setSearchString}: FilterType) => {
-
+export const Filter = ({ searchString, setSearchString }: FilterType) => {
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         setSearchString(event.target.value)
     }
 
     return (
         <Box sx={styles.Wrapper}>
-            <Typography variant='h1' sx={styles.Typography}>Filter By Keywords</Typography>
+            <Typography variant='h1' sx={styles.Typography}>
+                Filter By Keywords
+            </Typography>
             <Box sx={styles.InputWrapper}>
-                <SearchRoundedIcon sx={styles.Search}/>
+                <SearchRoundedIcon sx={styles.Search} />
                 <TextField
                     sx={styles.Input}
                     value={searchString}
@@ -28,5 +29,5 @@ export const Filter = ({searchString, setSearchString}: FilterType) => {
                 />
             </Box>
         </Box>
-    );
-};
+    )
+}

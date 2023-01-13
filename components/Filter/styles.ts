@@ -1,7 +1,7 @@
-import {SxProps} from '@mui/material/styles'
+import { SxProps } from '@mui/material/styles'
 
 export const Wrapper: SxProps = {
-    mb: '40px'
+    mb: '40px',
 }
 
 export const Typography: SxProps = {
@@ -23,19 +23,18 @@ export const Search: SxProps = {
 }
 
 export const Input: SxProps = {
-
     width: '100%',
     maxWidth: '650px',
 
-    'input': {
+    input: {
         pl: '60px',
         height: '100%',
         maxHeight: '50px',
         boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.05)',
-        color: '#575757'
+        color: '#575757',
     },
 
-    'fieldset': {
-        borderColor: '#d2d1d1'
-    }
+    fieldset: {
+        borderColor: '#d2d1d1',
+    },
 }

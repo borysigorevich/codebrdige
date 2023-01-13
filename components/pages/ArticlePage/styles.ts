@@ -1,14 +1,14 @@
-import {SxProps} from '@mui/material/styles'
+import { SxProps } from '@mui/material/styles'
 
 export const Wrapper: SxProps = {
-    'a': {
+    a: {
         display: 'flex',
         alignItems: 'center',
         gap: '6px',
         fontWeight: '800',
         mt: '20px',
-        pl: '150px'
-    }
+        pl: '150px',
+    },
 }
 
 export const ImageWrapper: SxProps = {
@@ -16,9 +16,9 @@ export const ImageWrapper: SxProps = {
     width: '100%',
     height: '245px',
 
-    'img': {
-        objectFit: 'cover'
-    }
+    img: {
+        objectFit: 'cover',
+    },
 }
 
 export const ContentWrapper: SxProps = {
@@ -41,5 +41,5 @@ export const Title: SxProps = {
 
 export const Summary: SxProps = {
     fontSize: '18px',
-    color: '#000'
+    color: '#000',
 }
