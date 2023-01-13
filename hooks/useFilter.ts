@@ -12,12 +12,12 @@ export const useFilter = (articles: ArticleType[] | undefined) => {
 
 
     const handleFilterArticles = () => {
-        const textToSearch = searchString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-
-        const textArray = textToSearch.trim().split(' ')
+        // const textToSearch = searchString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const textArray = searchString.trim().split(' ').filter(Boolean)
 
         let resultTextToSearch = []
         if (textArray.length === 1) resultTextToSearch.push(textArray[0])
+
         else {
             for (let i = 0; i < textArray.length; i++) {
                 resultTextToSearch.push(textArray[i])
